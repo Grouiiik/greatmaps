@@ -3,3 +3,28 @@
 ################################################################################
 
 /.vs
+/Demo.WindowsForms/bin
+/Demo.WindowsForms/obj
+/Demo.WindowsPresentation/bin
+/Demo.WindowsPresentation/obj
+/GMap.NET.Core/bin
+/GMap.NET.Core/obj/Debug
+/GMap.NET.Core/obj
+/GMap.NET.WindowsForms/bin
+/GMap.NET.WindowsForms/obj/Debug
+/GMap.NET.WindowsForms/obj
+/GMap.NET.WindowsPresentation/bin
+/GMap.NET.WindowsPresentation/obj/v4.0-Debug
+/GMap.NET.WindowsPresentation/obj/v4.0-Release
+/Setup/GMap.NET - Hot Build/obj/Debug
+/Testing/BigMapMaker/obj/Debug
+/Testing/BingWpfFusion/obj/Debug
+/Testing/ConsoleApplication/obj/Debug
+/Testing/Demo.Clouds/obj/Debug
+/Testing/Demo.Docking/obj/Debug
+/Testing/Demo.StreetView/obj/Debug
+/Testing/MvcMapFusion/bin
+/Testing/MvcMapFusion/obj/Debug
+/Testing/Silverlight/SilverlightMapFusion.Web/obj/Debug
+/Testing/TemplatedBinding/obj/Debug
+/Tools/MapCruncher/obj

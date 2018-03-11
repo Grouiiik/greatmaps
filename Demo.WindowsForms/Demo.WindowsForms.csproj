@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Demo.WindowsForms</RootNamespace>
-    <AssemblyName>Demo.WindowsForms</AssemblyName>
+    <AssemblyName>GMap.NET_CMANO</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ApplicationIcon>Resources\ImageReady.ico</ApplicationIcon>
     <TargetFrameworkSubset>

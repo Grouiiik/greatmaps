@@ -5,9 +5,9 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Demo.WindowsForms")]
-[assembly: AssemblyDescription("Demo for GMap.NET.WindowsForms")]
-[assembly: AssemblyProduct("Demo.WindowsForms")]
+[assembly: AssemblyTitle("GMap.NET CMANO")]
+[assembly: AssemblyDescription("GMap.NET optimized for CMANO")]
+[assembly: AssemblyProduct("GMap.NET CMANO")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
