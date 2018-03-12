@@ -1,6 +1,6 @@
 GMap.NET adaptation for Command : Modern Air/Naval Operations
 
-* Same Latitude and longigute format as in the game
+* Same Latitude and longitude format as in the game
 * BingSatelliteMap selected by default
 * You can choose the destination folder
 
