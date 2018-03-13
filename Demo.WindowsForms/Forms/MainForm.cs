@@ -18,8 +18,6 @@ using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using GMap.NET.WindowsForms.ToolTips;
 using System.Reflection;
-using ProjNet.CoordinateSystems.Transformations;
-using ProjNet.CoordinateSystems;
 
 namespace Demo.WindowsForms
 {
@@ -2500,48 +2498,9 @@ namespace Demo.WindowsForms
 
             try
             {
-                textBoxLat.Text = string.Empty;
+                var result = Stuff.ConvertDegreeAngleToDouble(textBoxLatDegree, textBoxLatMinute, textBoxLatSecond, true);
 
-                if (textBoxLatDegree.Text.Length < 2)
-                {
-                    return;
-                }
-
-                string letter = textBoxLatDegree.Text.Substring(0, 1);
-                if (letter.ToUpperInvariant() != "N" && letter.ToUpperInvariant() != "S")
-                {
-                    textBoxLatDegree.BackColor = Color.Red;
-                    return;
-                }
-                else
-                {
-                    textBoxLatDegree.BackColor = Color.White;
-                }
-
-                double degrees;
-                if (!double.TryParse(textBoxLatDegree.Text.Substring(1, textBoxLatDegree.Text.Length - 1), out degrees))
-                {
-                    return;
-                }
-
-                if (letter.ToUpperInvariant() == "S")
-                {
-                    degrees *= -1;
-                }
-
-                double minutes;
-                if (!double.TryParse(textBoxLatMinute.Text, out minutes))
-                {
-                    return;
-                }
-
-                double seconds;
-                if (!double.TryParse(textBoxLatSecond.Text, out seconds))
-                {
-                    return;
-                }
-
-                textBoxLat.Text = Stuff.ConvertDegreeAngleToDouble(degrees, minutes, seconds).ToString(CultureInfo.InvariantCulture);
+                textBoxLat.Text = double.IsNaN(result) ? string.Empty : result.ToString(CultureInfo.InvariantCulture);
             }
             finally
             {
@@ -2555,53 +2514,34 @@ namespace Demo.WindowsForms
 
             try
             {
-                textBoxLng.Text = string.Empty;
+                var result = Stuff.ConvertDegreeAngleToDouble(textBoxLngDegree, textBoxLngMinute, textBoxLngSecond, false);
 
-                if (textBoxLngDegree.Text.Length < 2)
-                {
-                    return;
-                }
-
-                string letter = textBoxLngDegree.Text.Substring(0, 1);
-                if (letter.ToUpperInvariant() != "W" && letter.ToUpperInvariant() != "E")
-                {
-                    textBoxLngDegree.BackColor = Color.Red;
-                    return;
-                }
-                else
-                {
-                    textBoxLngDegree.BackColor = Color.White;
-                }
-
-                double degrees;
-                if (!double.TryParse(textBoxLngDegree.Text.Substring(1, textBoxLngDegree.Text.Length - 1), out degrees))
-                {
-                    return;
-                }
-
-                if (letter.ToUpperInvariant() == "W")
-                {
-                    degrees *= -1;
-                }
-
-                double minutes;
-                if (!double.TryParse(textBoxLngMinute.Text, out minutes))
-                {
-                    return;
-                }
-
-                double seconds;
-                if (!double.TryParse(textBoxLngSecond.Text, out seconds))
-                {
-                    return;
-                }
-
-                textBoxLng.Text = Stuff.ConvertDegreeAngleToDouble(degrees, minutes, seconds).ToString(CultureInfo.InvariantCulture);
+                textBoxLng.Text = double.IsNaN(result) ? string.Empty : result.ToString(CultureInfo.InvariantCulture);
             }
             finally
             {
                 textBoxLng.TextChanged += new EventHandler(this.textBoxLng_TextChanged);
             }
+        }
+
+        private void buttonDraw_Click(object sender, EventArgs e)
+        {
+            var topLeftLatitude = Stuff.ConvertDegreeAngleToDouble(textBoxTLLatDegree, textBoxTLLatMinute, textBoxTLLatSecond, true);
+            var topLeftLongitude = Stuff.ConvertDegreeAngleToDouble(textBoxTLLngDegree, textBoxTLLngMinute, textBoxTLLngSecond, false);
+            var bottomRightLatitude = Stuff.ConvertDegreeAngleToDouble(textBoxBRLatDegree, textBoxBRLatMinute, textBoxBRLatSecond, true);
+            var bottomRightLongitude = Stuff.ConvertDegreeAngleToDouble(textBoxBRLngDegree, textBoxBRLngMinute, textBoxBRLngSecond, false);
+
+            PointLatLng pTopLeft = new PointLatLng(topLeftLatitude, topLeftLongitude);
+            PointLatLng pBottomRight = new PointLatLng(bottomRightLatitude, bottomRightLongitude);
+
+            double x1 = Math.Min(pTopLeft.Lng, pBottomRight.Lng);
+            double y1 = Math.Max(pTopLeft.Lat, pBottomRight.Lat);
+            double x2 = Math.Max(pTopLeft.Lng, pBottomRight.Lng);
+            double y2 = Math.Min(pTopLeft.Lat, pBottomRight.Lat);
+
+            MainMap.SelectedArea = new RectLatLng(y1, x1, x2 - x1, y1 - y2);
+
+            MainMap.Refresh();
         }
     }
 }

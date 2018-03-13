@@ -50,13 +50,13 @@ namespace Demo.WindowsForms
                 }
                 else if (e.Result != null)
                 {
-                    try
+                    /*try
                     {
                         Process.Start(e.Result as string);
                     }
                     catch
                     {
-                    }
+                    }*/
                 }
             }
 
@@ -344,6 +344,8 @@ namespace Demo.WindowsForms
                                 {
                                     while (shrinkLoop <= 100)
                                     {
+                                        shrinkLoop++;
+
                                         int nextWidth = shrinkImage.Width / 2;
                                         int nextHeight = shrinkImage.Height / 2;
 
@@ -356,8 +358,6 @@ namespace Demo.WindowsForms
                                         {
                                             break;
                                         }
-
-                                        shrinkLoop++;
                                     }
                                 }
                                 else
@@ -389,7 +389,19 @@ namespace Demo.WindowsForms
                 // generate world file
                 if (info.MakeWorldFile)
                 {
-                    string wf = Path.ChangeExtension(smallImage, "pgw");
+                    string wf = Path.ChangeExtension(bigImage, "pgw");
+                    using (StreamWriter world = File.CreateText(wf))
+                    {
+                        world.WriteLine("{0:0.000000000000}", (info.Area.WidthLng / pxDelta.X));
+                        world.WriteLine("0.0000000");
+                        world.WriteLine("0.0000000");
+                        world.WriteLine("{0:0.000000000000}", (-info.Area.HeightLat / pxDelta.Y));
+                        world.WriteLine("{0:0.000000000000}", info.Area.Left);
+                        world.WriteLine("{0:0.000000000000}", info.Area.Top);
+                        world.Close();
+                    }
+
+                    wf = Path.ChangeExtension(smallImage, "pgw");
                     using (StreamWriter world = File.CreateText(wf))
                     {
                         world.WriteLine("{0:0.000000000000}", (info.Area.WidthLng / pxDelta.X) * (shrinkLoop > 0 ? 2 * shrinkLoop : 1));

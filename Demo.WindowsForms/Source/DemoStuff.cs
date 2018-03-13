@@ -12,6 +12,8 @@ using System.Diagnostics;
 
 #if !PocketPC
 using System.Net.NetworkInformation;
+using System.Windows.Forms;
+using System.Drawing;
 #endif
 
 #if !MONO
@@ -60,8 +62,48 @@ namespace Demo.WindowsForms
 
     public class Stuff
     {
-        public static double ConvertDegreeAngleToDouble(double degrees, double minutes, double seconds)
+        public static double ConvertDegreeAngleToDouble(TextBox degreesTxt, TextBox minutesTxt, TextBox secondsTxt, bool isLatitude)
         {
+            if (degreesTxt.Text.Length < 2)
+            {
+                return double.NaN;
+            }
+
+            string letter = degreesTxt.Text.Substring(0, 1);
+            if ((isLatitude && letter.ToUpperInvariant() != "N" && letter.ToUpperInvariant() != "S")
+                || (!isLatitude && letter.ToUpperInvariant() != "W" && letter.ToUpperInvariant() != "E"))
+            {
+                degreesTxt.BackColor = Color.Red;
+                return double.NaN;
+            }
+            else
+            {
+                degreesTxt.BackColor = Color.White;
+            }
+
+            double degrees;
+            if (!double.TryParse(degreesTxt.Text.Substring(1, degreesTxt.Text.Length - 1), out degrees))
+            {
+                return double.NaN;
+            }
+
+            if ((isLatitude && letter.ToUpperInvariant() == "S") || (!isLatitude && letter.ToUpperInvariant() == "W"))
+            {
+                degrees *= -1;
+            }
+
+            double minutes;
+            if (!double.TryParse(minutesTxt.Text, out minutes))
+            {
+                return double.NaN;
+            }
+
+            double seconds;
+            if (!double.TryParse(secondsTxt.Text, out seconds))
+            {
+                return double.NaN;
+            }
+
             var multiplier = degrees < 0 ? -1 : 1;
 
             return (Math.Abs(degrees) + (minutes / 60) + (seconds / 3600)) * multiplier;

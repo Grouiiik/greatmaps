@@ -66,6 +66,25 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboBoxMapType = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonDraw = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBoxBRLngSecond = new System.Windows.Forms.TextBox();
+            this.textBoxBRLngMinute = new System.Windows.Forms.TextBox();
+            this.textBoxBRLngDegree = new System.Windows.Forms.TextBox();
+            this.textBoxBRLatSecond = new System.Windows.Forms.TextBox();
+            this.textBoxBRLatMinute = new System.Windows.Forms.TextBox();
+            this.textBoxBRLatDegree = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBoxTLLngSecond = new System.Windows.Forms.TextBox();
+            this.textBoxTLLngMinute = new System.Windows.Forms.TextBox();
+            this.textBoxTLLngDegree = new System.Windows.Forms.TextBox();
+            this.textBoxTLLatSecond = new System.Windows.Forms.TextBox();
+            this.textBoxTLLatMinute = new System.Windows.Forms.TextBox();
+            this.textBoxTLLatDegree = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.textBoxLngSecond = new System.Windows.Forms.TextBox();
@@ -154,7 +173,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(661, 665);
+            this.panel2.Size = new System.Drawing.Size(661, 821);
             this.panel2.TabIndex = 41;
             // 
             // MainMap
@@ -180,7 +199,7 @@
             this.MainMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.MainMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.MainMap.ShowTileGridLines = false;
-            this.MainMap.Size = new System.Drawing.Size(661, 665);
+            this.MainMap.Size = new System.Drawing.Size(661, 821);
             this.MainMap.TabIndex = 0;
             this.MainMap.Zoom = 0D;
             // 
@@ -193,7 +212,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(891, 665);
+            this.panel4.Size = new System.Drawing.Size(891, 821);
             this.panel4.TabIndex = 44;
             // 
             // splitter1
@@ -206,7 +225,7 @@
             this.splitter1.MinExtra = 390;
             this.splitter1.MinSize = 390;
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(2, 665);
+            this.splitter1.Size = new System.Drawing.Size(2, 821);
             this.splitter1.TabIndex = 42;
             this.splitter1.TabStop = false;
             // 
@@ -239,7 +258,7 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.PanelStyle = BSE.Windows.Forms.PanelStyle.Office2007;
             this.panelMenu.ShowExpandIcon = true;
-            this.panelMenu.Size = new System.Drawing.Size(228, 665);
+            this.panelMenu.Size = new System.Drawing.Size(228, 821);
             this.panelMenu.TabIndex = 40;
             this.panelMenu.Text = "Menu";
             this.panelMenu.ToolTipTextCloseIcon = null;
@@ -261,7 +280,7 @@
             this.xPanderPanelList1.PanelColors = null;
             this.xPanderPanelList1.PanelStyle = BSE.Windows.Forms.PanelStyle.Office2007;
             this.xPanderPanelList1.ShowExpandIcon = true;
-            this.xPanderPanelList1.Size = new System.Drawing.Size(228, 636);
+            this.xPanderPanelList1.Size = new System.Drawing.Size(228, 792);
             this.xPanderPanelList1.TabIndex = 0;
             this.xPanderPanelList1.Text = "xPanderPanelList1";
             // 
@@ -297,7 +316,7 @@
             this.xPanderPanelMain.Margin = new System.Windows.Forms.Padding(2);
             this.xPanderPanelMain.Name = "xPanderPanelMain";
             this.xPanderPanelMain.PanelStyle = BSE.Windows.Forms.PanelStyle.Office2007;
-            this.xPanderPanelMain.Size = new System.Drawing.Size(228, 561);
+            this.xPanderPanelMain.Size = new System.Drawing.Size(228, 717);
             this.xPanderPanelMain.TabIndex = 0;
             this.xPanderPanelMain.Text = "map";
             this.xPanderPanelMain.ToolTipTextCloseIcon = null;
@@ -318,7 +337,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(226, 536);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(226, 692);
             this.tableLayoutPanel4.TabIndex = 38;
             // 
             // tableLayoutPanel5
@@ -339,7 +358,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 6F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(176, 534);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(176, 690);
             this.tableLayoutPanel5.TabIndex = 30;
             // 
             // groupBox8
@@ -349,7 +368,7 @@
             this.groupBox8.Controls.Add(this.button5);
             this.groupBox8.Controls.Add(this.button4);
             this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox8.Location = new System.Drawing.Point(3, 500);
+            this.groupBox8.Location = new System.Drawing.Point(3, 671);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(170, 74);
             this.groupBox8.TabIndex = 37;
@@ -412,7 +431,7 @@
             this.groupBox7.Controls.Add(this.button6);
             this.groupBox7.Controls.Add(this.button3);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox7.Location = new System.Drawing.Point(3, 339);
+            this.groupBox7.Location = new System.Drawing.Point(3, 510);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(170, 155);
             this.groupBox7.TabIndex = 35;
@@ -535,7 +554,7 @@
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.comboBoxMapType);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox5.Location = new System.Drawing.Point(3, 187);
+            this.groupBox5.Location = new System.Drawing.Point(3, 358);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(170, 146);
             this.groupBox5.TabIndex = 31;
@@ -650,6 +669,25 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.buttonDraw);
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Controls.Add(this.label21);
+            this.groupBox3.Controls.Add(this.textBoxBRLngSecond);
+            this.groupBox3.Controls.Add(this.textBoxBRLngMinute);
+            this.groupBox3.Controls.Add(this.textBoxBRLngDegree);
+            this.groupBox3.Controls.Add(this.textBoxBRLatSecond);
+            this.groupBox3.Controls.Add(this.textBoxBRLatMinute);
+            this.groupBox3.Controls.Add(this.textBoxBRLatDegree);
+            this.groupBox3.Controls.Add(this.label22);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.textBoxTLLngSecond);
+            this.groupBox3.Controls.Add(this.textBoxTLLngMinute);
+            this.groupBox3.Controls.Add(this.textBoxTLLngDegree);
+            this.groupBox3.Controls.Add(this.textBoxTLLatSecond);
+            this.groupBox3.Controls.Add(this.textBoxTLLatMinute);
+            this.groupBox3.Controls.Add(this.textBoxTLLatDegree);
+            this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.textBoxLngSecond);
@@ -669,10 +707,178 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Location = new System.Drawing.Point(3, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(170, 178);
+            this.groupBox3.Size = new System.Drawing.Size(170, 349);
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "coordinates";
+            // 
+            // buttonDraw
+            // 
+            this.buttonDraw.Location = new System.Drawing.Point(6, 319);
+            this.buttonDraw.Name = "buttonDraw";
+            this.buttonDraw.Size = new System.Drawing.Size(72, 24);
+            this.buttonDraw.TabIndex = 39;
+            this.buttonDraw.Text = "Draw zone !";
+            this.buttonDraw.UseVisualStyleBackColor = true;
+            this.buttonDraw.Click += new System.EventHandler(this.buttonDraw_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(109, 296);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(50, 13);
+            this.label20.TabIndex = 38;
+            this.label20.Text = "longitude";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(109, 270);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(41, 13);
+            this.label21.TabIndex = 37;
+            this.label21.Text = "latitude";
+            // 
+            // textBoxBRLngSecond
+            // 
+            this.textBoxBRLngSecond.Location = new System.Drawing.Point(78, 293);
+            this.textBoxBRLngSecond.MaxLength = 2;
+            this.textBoxBRLngSecond.Name = "textBoxBRLngSecond";
+            this.textBoxBRLngSecond.Size = new System.Drawing.Size(25, 20);
+            this.textBoxBRLngSecond.TabIndex = 36;
+            this.textBoxBRLngSecond.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBoxBRLngMinute
+            // 
+            this.textBoxBRLngMinute.Location = new System.Drawing.Point(47, 293);
+            this.textBoxBRLngMinute.MaxLength = 2;
+            this.textBoxBRLngMinute.Name = "textBoxBRLngMinute";
+            this.textBoxBRLngMinute.Size = new System.Drawing.Size(25, 20);
+            this.textBoxBRLngMinute.TabIndex = 35;
+            this.textBoxBRLngMinute.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBoxBRLngDegree
+            // 
+            this.textBoxBRLngDegree.Location = new System.Drawing.Point(6, 293);
+            this.textBoxBRLngDegree.MaxLength = 4;
+            this.textBoxBRLngDegree.Name = "textBoxBRLngDegree";
+            this.textBoxBRLngDegree.Size = new System.Drawing.Size(35, 20);
+            this.textBoxBRLngDegree.TabIndex = 34;
+            // 
+            // textBoxBRLatSecond
+            // 
+            this.textBoxBRLatSecond.Location = new System.Drawing.Point(78, 267);
+            this.textBoxBRLatSecond.MaxLength = 2;
+            this.textBoxBRLatSecond.Name = "textBoxBRLatSecond";
+            this.textBoxBRLatSecond.Size = new System.Drawing.Size(25, 20);
+            this.textBoxBRLatSecond.TabIndex = 33;
+            this.textBoxBRLatSecond.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBoxBRLatMinute
+            // 
+            this.textBoxBRLatMinute.Location = new System.Drawing.Point(47, 267);
+            this.textBoxBRLatMinute.MaxLength = 2;
+            this.textBoxBRLatMinute.Name = "textBoxBRLatMinute";
+            this.textBoxBRLatMinute.Size = new System.Drawing.Size(25, 20);
+            this.textBoxBRLatMinute.TabIndex = 32;
+            this.textBoxBRLatMinute.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBoxBRLatDegree
+            // 
+            this.textBoxBRLatDegree.Location = new System.Drawing.Point(6, 267);
+            this.textBoxBRLatDegree.MaxLength = 4;
+            this.textBoxBRLatDegree.Name = "textBoxBRLatDegree";
+            this.textBoxBRLatDegree.Size = new System.Drawing.Size(35, 20);
+            this.textBoxBRLatDegree.TabIndex = 31;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 251);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(95, 13);
+            this.label22.TabIndex = 30;
+            this.label22.Text = "Bottom Right Point";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(109, 231);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(50, 13);
+            this.label18.TabIndex = 29;
+            this.label18.Text = "longitude";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(109, 205);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(41, 13);
+            this.label19.TabIndex = 28;
+            this.label19.Text = "latitude";
+            // 
+            // textBoxTLLngSecond
+            // 
+            this.textBoxTLLngSecond.Location = new System.Drawing.Point(78, 228);
+            this.textBoxTLLngSecond.MaxLength = 2;
+            this.textBoxTLLngSecond.Name = "textBoxTLLngSecond";
+            this.textBoxTLLngSecond.Size = new System.Drawing.Size(25, 20);
+            this.textBoxTLLngSecond.TabIndex = 27;
+            this.textBoxTLLngSecond.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBoxTLLngMinute
+            // 
+            this.textBoxTLLngMinute.Location = new System.Drawing.Point(47, 228);
+            this.textBoxTLLngMinute.MaxLength = 2;
+            this.textBoxTLLngMinute.Name = "textBoxTLLngMinute";
+            this.textBoxTLLngMinute.Size = new System.Drawing.Size(25, 20);
+            this.textBoxTLLngMinute.TabIndex = 26;
+            this.textBoxTLLngMinute.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBoxTLLngDegree
+            // 
+            this.textBoxTLLngDegree.Location = new System.Drawing.Point(6, 228);
+            this.textBoxTLLngDegree.MaxLength = 4;
+            this.textBoxTLLngDegree.Name = "textBoxTLLngDegree";
+            this.textBoxTLLngDegree.Size = new System.Drawing.Size(35, 20);
+            this.textBoxTLLngDegree.TabIndex = 25;
+            // 
+            // textBoxTLLatSecond
+            // 
+            this.textBoxTLLatSecond.Location = new System.Drawing.Point(78, 202);
+            this.textBoxTLLatSecond.MaxLength = 2;
+            this.textBoxTLLatSecond.Name = "textBoxTLLatSecond";
+            this.textBoxTLLatSecond.Size = new System.Drawing.Size(25, 20);
+            this.textBoxTLLatSecond.TabIndex = 24;
+            this.textBoxTLLatSecond.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBoxTLLatMinute
+            // 
+            this.textBoxTLLatMinute.Location = new System.Drawing.Point(47, 202);
+            this.textBoxTLLatMinute.MaxLength = 2;
+            this.textBoxTLLatMinute.Name = "textBoxTLLatMinute";
+            this.textBoxTLLatMinute.Size = new System.Drawing.Size(25, 20);
+            this.textBoxTLLatMinute.TabIndex = 23;
+            this.textBoxTLLatMinute.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBoxTLLatDegree
+            // 
+            this.textBoxTLLatDegree.Location = new System.Drawing.Point(6, 202);
+            this.textBoxTLLatDegree.MaxLength = 4;
+            this.textBoxTLLatDegree.Name = "textBoxTLLatDegree";
+            this.textBoxTLLatDegree.Size = new System.Drawing.Size(35, 20);
+            this.textBoxTLLatDegree.TabIndex = 22;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 186);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(74, 13);
+            this.label17.TabIndex = 21;
+            this.label17.Text = "Top Left Point";
             // 
             // label16
             // 
@@ -776,8 +982,7 @@
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(85, 148);
+            this.button1.Location = new System.Drawing.Point(82, 150);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(74, 24);
             this.button1.TabIndex = 9;
@@ -787,8 +992,7 @@
             // 
             // button8
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button8.Location = new System.Drawing.Point(9, 148);
+            this.button8.Location = new System.Drawing.Point(6, 150);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(72, 24);
             this.button8.TabIndex = 8;
@@ -847,7 +1051,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(44, 532);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(44, 688);
             this.tableLayoutPanel6.TabIndex = 31;
             // 
             // buttonZoomUp
@@ -874,7 +1078,7 @@
             this.trackBar1.Minimum = 1;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar1.Size = new System.Drawing.Size(45, 478);
+            this.trackBar1.Size = new System.Drawing.Size(45, 634);
             this.trackBar1.TabIndex = 29;
             this.trackBar1.TickFrequency = 100;
             this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
@@ -885,7 +1089,7 @@
             // 
             this.buttonZoomDown.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonZoomDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonZoomDown.Location = new System.Drawing.Point(0, 505);
+            this.buttonZoomDown.Location = new System.Drawing.Point(0, 661);
             this.buttonZoomDown.Margin = new System.Windows.Forms.Padding(0);
             this.buttonZoomDown.Name = "buttonZoomDown";
             this.buttonZoomDown.Size = new System.Drawing.Size(45, 27);
@@ -1506,7 +1710,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(891, 665);
+            this.ClientSize = new System.Drawing.Size(891, 821);
             this.Controls.Add(this.panel4);
             this.KeyPreview = true;
             this.MinimumSize = new System.Drawing.Size(554, 106);
@@ -1647,6 +1851,25 @@
         private System.Windows.Forms.TextBox textBoxLatDegree;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button buttonDraw;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBoxBRLngSecond;
+        private System.Windows.Forms.TextBox textBoxBRLngMinute;
+        private System.Windows.Forms.TextBox textBoxBRLngDegree;
+        private System.Windows.Forms.TextBox textBoxBRLatSecond;
+        private System.Windows.Forms.TextBox textBoxBRLatMinute;
+        private System.Windows.Forms.TextBox textBoxBRLatDegree;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBoxTLLngSecond;
+        private System.Windows.Forms.TextBox textBoxTLLngMinute;
+        private System.Windows.Forms.TextBox textBoxTLLngDegree;
+        private System.Windows.Forms.TextBox textBoxTLLatSecond;
+        private System.Windows.Forms.TextBox textBoxTLLatMinute;
+        private System.Windows.Forms.TextBox textBoxTLLatDegree;
+        private System.Windows.Forms.Label label17;
     }
 }
 
