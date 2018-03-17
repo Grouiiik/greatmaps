@@ -111,7 +111,9 @@ namespace Demo.WindowsForms
 
         public static System.Drawing.Image FixedSize(System.Drawing.Image imgPhoto, int Width, int Height)
         {
-            int sourceWidth = imgPhoto.Width;
+            return ImageUtilities.ResizeImage(imgPhoto, Width, Height);
+
+            /*int sourceWidth = imgPhoto.Width;
             int sourceHeight = imgPhoto.Height;
             int sourceX = 0;
             int sourceY = 0;
@@ -156,7 +158,7 @@ namespace Demo.WindowsForms
                 System.Drawing.GraphicsUnit.Pixel);
 
             grPhoto.Dispose();
-            return bmPhoto;
+            return bmPhoto;*/
         }
 
 #if !PocketPC

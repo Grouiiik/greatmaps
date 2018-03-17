@@ -293,6 +293,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Source\DemoStuff.cs" />
+    <Compile Include="Source\ImageUtilities.cs" />
     <Compile Include="Source\Map.cs">
       <SubType>UserControl</SubType>
     </Compile>

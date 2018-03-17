@@ -330,12 +330,13 @@ namespace Demo.WindowsForms
                             }
                         }
 
-                        bmpDestination.Save(bigImage, ImageFormat.Png);
+                        ImageUtilities.SavePng(bigImage, bmpDestination);
 
-                        Image shrinkImage = bmpDestination;
-
+                        Image shrinkImage = null;
                         try
                         {
+                            shrinkImage = bmpDestination;
+
                             long size;
                             if (long.TryParse(textBoxSizeFile.Text, out size))
                             {
@@ -346,12 +347,12 @@ namespace Demo.WindowsForms
                                     {
                                         shrinkLoop++;
 
-                                        int nextWidth = shrinkImage.Width / 2;
-                                        int nextHeight = shrinkImage.Height / 2;
+                                        int nextWidth = shrinkImage.Width * 80 / 100;
+                                        int nextHeight = shrinkImage.Height * 80 / 100;
 
                                         // Shrink image
                                         shrinkImage = Stuff.FixedSize(shrinkImage, nextWidth, nextHeight);
-                                        shrinkImage.Save(smallImage, ImageFormat.Png);
+                                        ImageUtilities.SavePng(smallImage, shrinkImage);
 
                                         fileLength = new FileInfo(smallImage).Length;
                                         if (fileLength > 0 && (fileLength / 1024 / 1024) < size)
@@ -362,7 +363,7 @@ namespace Demo.WindowsForms
                                 }
                                 else
                                 {
-                                    shrinkImage.Save(smallImage, ImageFormat.Png);
+                                    ImageUtilities.SavePng(smallImage, shrinkImage);
                                 }
                             }
                             else
@@ -373,6 +374,10 @@ namespace Demo.WindowsForms
                         catch (Exception ex)
                         {
                             MessageBox.Show(ex.ToString(), "GMap.NET - Demo.WindowsForms", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        finally
+                        {
+                            shrinkImage.Dispose();
                         }
                     }
                 }
@@ -404,10 +409,10 @@ namespace Demo.WindowsForms
                     wf = Path.ChangeExtension(smallImage, "pgw");
                     using (StreamWriter world = File.CreateText(wf))
                     {
-                        world.WriteLine("{0:0.000000000000}", (info.Area.WidthLng / pxDelta.X) * (shrinkLoop > 0 ? 2 * shrinkLoop : 1));
+                        world.WriteLine("{0:0.000000000000}", (info.Area.WidthLng / pxDelta.X) * (shrinkLoop > 0 ? Math.Pow(1.25, shrinkLoop) : 1));
                         world.WriteLine("0.0000000");
                         world.WriteLine("0.0000000");
-                        world.WriteLine("{0:0.000000000000}", (-info.Area.HeightLat / pxDelta.Y) * (shrinkLoop > 0 ? 2 * shrinkLoop : 1));
+                        world.WriteLine("{0:0.000000000000}", (-info.Area.HeightLat / pxDelta.Y) * (shrinkLoop > 0 ? Math.Pow(1.25, shrinkLoop) : 1));
                         world.WriteLine("{0:0.000000000000}", info.Area.Left);
                         world.WriteLine("{0:0.000000000000}", info.Area.Top);
                         world.Close();
