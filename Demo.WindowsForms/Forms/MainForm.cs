@@ -2542,6 +2542,16 @@ namespace Demo.WindowsForms
             MainMap.SelectedArea = new RectLatLng(y1, x1, x2 - x1, y1 - y2);
 
             MainMap.Refresh();
+
+            textBoxLatDegree.Text = textBoxTLLatDegree.Text;
+            textBoxLatMinute.Text = textBoxTLLatMinute.Text;
+            textBoxLatSecond.Text = textBoxTLLatSecond.Text;
+
+            textBoxLngDegree.Text = textBoxTLLngDegree.Text;
+            textBoxLngMinute.Text = textBoxTLLngMinute.Text;
+            textBoxLngSecond.Text = textBoxTLLngSecond.Text;
+
+            button8_Click(sender, EventArgs.Empty);
         }
     }
 }
